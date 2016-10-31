@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C3B84F4C08E8BE395816B14 /* Pods_CloudPhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0009B9DA06BBEBC9F5D75920 /* Pods_CloudPhotos.framework */; };
 		60D1ADDE1DC6E9EB00498041 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D1ADDD1DC6E9EB00498041 /* main.m */; };
 		60D1ADE11DC6E9EB00498041 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D1ADE01DC6E9EB00498041 /* AppDelegate.m */; };
 		60D1ADE41DC6E9EB00498041 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D1ADE31DC6E9EB00498041 /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0009B9DA06BBEBC9F5D75920 /* Pods_CloudPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AF3878C5F01851EF72F52F4 /* Pods-CloudPhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudPhotos.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudPhotos/Pods-CloudPhotos.release.xcconfig"; sourceTree = "<group>"; };
 		60D1ADD91DC6E9EB00498041 /* CloudPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D1ADDD1DC6E9EB00498041 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60D1ADDF1DC6E9EB00498041 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		60D1ADE81DC6E9EB00498041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60D1ADEB1DC6E9EB00498041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60D1ADED1DC6E9EB00498041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAA7CFA622140BF5390DD94F /* Pods-CloudPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudPhotos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudPhotos/Pods-CloudPhotos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C3B84F4C08E8BE395816B14 /* Pods_CloudPhotos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11F6935F1E178C9BF79B1F1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAA7CFA622140BF5390DD94F /* Pods-CloudPhotos.debug.xcconfig */,
+				2AF3878C5F01851EF72F52F4 /* Pods-CloudPhotos.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		60D1ADD01DC6E9EB00498041 = {
 			isa = PBXGroup;
 			children = (
 				60D1ADDB1DC6E9EB00498041 /* CloudPhotos */,
 				60D1ADDA1DC6E9EB00498041 /* Products */,
+				11F6935F1E178C9BF79B1F1B /* Pods */,
+				8E123F8C2BAFED2ABA9928C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +95,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8E123F8C2BAFED2ABA9928C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0009B9DA06BBEBC9F5D75920 /* Pods_CloudPhotos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60D1ADF01DC6E9EB00498041 /* Build configuration list for PBXNativeTarget "CloudPhotos" */;
 			buildPhases = (
+				6BD2A3A4A683F379D4914904 /* [CP] Check Pods Manifest.lock */,
 				60D1ADD51DC6E9EB00498041 /* Sources */,
 				60D1ADD61DC6E9EB00498041 /* Frameworks */,
 				60D1ADD71DC6E9EB00498041 /* Resources */,
+				1A541631823E50EAEB9C57FF /* [CP] Embed Pods Frameworks */,
+				238F223719B8CE36D59F825F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A541631823E50EAEB9C57FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudPhotos/Pods-CloudPhotos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		238F223719B8CE36D59F825F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudPhotos/Pods-CloudPhotos-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BD2A3A4A683F379D4914904 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		60D1ADD51DC6E9EB00498041 /* Sources */ = {
@@ -268,6 +343,7 @@
 		};
 		60D1ADF11DC6E9EB00498041 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAA7CFA622140BF5390DD94F /* Pods-CloudPhotos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CloudPhotos/Info.plist;
@@ -279,6 +355,7 @@
 		};
 		60D1ADF21DC6E9EB00498041 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AF3878C5F01851EF72F52F4 /* Pods-CloudPhotos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CloudPhotos/Info.plist;

@@ -1,0 +1,6 @@
+framework module Pods_CloudPhotos {
+  umbrella header "Pods-CloudPhotos-umbrella.h"
+
+  export *
+  module * { export * }
+}
