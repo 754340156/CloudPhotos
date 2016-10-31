@@ -1,0 +1,105 @@
+
+//
+//  UIView+Extension.m
+//  ZZCategory
+//
+//  Created by zhaozhe on 16/10/26.
+//  Copyright © 2016年 zhaozhe. All rights reserved.
+//
+
+#import "UIView+Extension.h"
+
+@implementation UIView (Extension)
+- (BOOL)intersectsWithView:(UIView *)view
+{
+    //都先转换为相对于窗口的坐标，然后进行判断是否重合
+    CGRect selfRect = [self convertRect:self.bounds toView:nil];
+    CGRect viewRect = [view convertRect:view.bounds toView:nil];
+    return CGRectIntersectsRect(selfRect, viewRect);
+}
+
++ (instancetype)viewFromXib
+{
+    
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
+}
+
+- (CGFloat)centerX
+{
+    return self.center.x;
+}
+- (void)setcenterX:(CGFloat)centerX
+{
+    CGPoint center = self.center;
+    center.x = centerX;
+    self.center = center;
+}
+- (CGFloat)centerY
+{
+    return self.center.y;
+}
+- (void)setcenterY:(CGFloat)centerY
+{
+    CGPoint center = self.center;
+    center.y = centerY;
+    self.center = center;
+}
+- (CGSize)size
+{
+    return self.frame.size;
+}
+
+- (void)setsize:(CGSize)size
+{
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+
+- (CGFloat)width
+{
+    return self.frame.size.width;
+}
+
+- (CGFloat)height
+{
+    return self.frame.size.height;
+}
+
+- (void)setwidth:(CGFloat)width
+{
+    CGRect frame = self.frame;
+    frame.size.width = width;
+    self.frame = frame;
+}
+- (void)setheight:(CGFloat)height
+{
+    CGRect frame = self.frame;
+    frame.size.height = height;
+    self.frame = frame;
+}
+
+- (CGFloat)x
+{
+    return self.frame.origin.x;
+}
+
+- (void)setx:(CGFloat)x
+{
+    CGRect frame = self.frame;
+    frame.origin.x = x;
+    self.frame = frame;
+}
+
+- (CGFloat)y
+{
+    return self.frame.origin.y;
+}
+
+- (void)sety:(CGFloat)y
+{
+    CGRect frame = self.frame;
+    frame.origin.y = y;
+    self.frame = frame;
+}
+@end
