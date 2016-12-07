@@ -22,9 +22,9 @@
 
 
 #ifdef DEBUG
-#define GHZLog(...) NSLog(__VA_ARGS__)
+#define CPLog(...) NSLog(__VA_ARGS__)
 #else
-#define GHZLog(...)
+#define CPLog(...)
 #endif
 
 #endif /* pch_pch */
